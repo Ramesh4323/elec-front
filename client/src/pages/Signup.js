@@ -64,7 +64,7 @@ const Signup = () => {
             Join Us Today
           </h2>
           <p className="text-secondary-600">
-            Create your JDE Electronics account
+            Create your JBE Jai Bhawani Electrical & hardware account
           </p>
         </div>
         <form className="space-y-6" onSubmit={onSubmit}>

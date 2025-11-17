@@ -50,7 +50,7 @@ const Login = () => {
             Welcome Back
           </h2>
           <p className="text-secondary-600">
-            Sign in to access your JDE Electronics account
+            Sign in to access your JBE Jai Bhawani Electrical & hardware account
           </p>
         </div>
         <form className="space-y-6" onSubmit={onSubmit}>

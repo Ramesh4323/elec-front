@@ -21,8 +21,8 @@ const Footer = () => {
                 <FaBolt className="text-white text-xl" />
               </div>
               <div>
-                <h3 className="text-2xl font-display font-bold gradient-text">JDE</h3>
-                <p className="text-xs text-secondary-300 font-medium">Electronics</p>
+                <h3 className="text-2xl font-display font-bold gradient-text">JBE</h3>
+                <p className="text-xs text-secondary-300 font-medium">Jai Bhawani Electrical & hardware</p>
               </div>
             </div>
             <p className="text-secondary-300 mb-6 leading-relaxed max-w-md">
@@ -154,7 +154,7 @@ const Footer = () => {
               </div>
             </div>
             <p className="text-secondary-300 text-center md:text-right">
-              &copy; 2024 Jitendra Dhawal Electronics. All rights reserved.
+              &copy; 2024 Jai Bhawani Electrical & hardware. All rights reserved.
               <span className="block text-xs mt-1 text-secondary-400">Crafted with ❤️ for quality electronics</span>
             </p>
           </div>

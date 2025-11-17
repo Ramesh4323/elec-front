@@ -55,9 +55,9 @@ const Header = () => {
             </div>
             <div>
               <h1 className="text-xl font-display font-bold gradient-text group-hover:scale-105 transition-transform duration-300">
-                JDE
+                JBE
               </h1>
-              <p className="text-xs text-neutral-600 font-medium">Electronics</p>
+              <p className="text-xs text-neutral-600 font-medium">Jai Bhawani Electrical & hardware</p>
             </div>
           </Link>
 

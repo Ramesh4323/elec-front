@@ -63,8 +63,8 @@ const Home = () => {
                   <span className="text-primary-700 font-semibold text-sm">Premium Electronics Store</span>
                 </div>
                 <h1 className="text-6xl lg:text-7xl font-display font-bold leading-tight">
-                  Welcome to JDE
-                  <span className="gradient-text block">Electronics</span>
+                  Welcome to JBE
+                  <span className="gradient-text block">Jai Bhawani Electrical & hardware</span>
                 </h1>
                 <p className="text-xl text-secondary-600 leading-relaxed max-w-lg">
                   Your trusted source for premium electronic components including pipes, wires, switches, lights, fans, and agricultural tools. Quality products for every need.
@@ -111,7 +111,7 @@ const Home = () => {
               <div className="glass-card rounded-3xl shadow-2xl p-8 transform hover:scale-105 transition-all duration-500">
                 <div className="relative">
                   <img
-                    src="/api/placeholder/500/400"
+                    src="R:\WhatsApp Image 2025-11-16 at 20.20.53_2364f526.jpg"
                     alt="Premium Electronics"
                     className="w-full h-80 object-cover rounded-2xl"
                   />
@@ -144,7 +144,7 @@ const Home = () => {
 
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-display font-bold mb-4 gradient-text">Why Choose JDE?</h2>
+            <h2 className="text-4xl font-display font-bold mb-4 gradient-text">Why Choose JBE?</h2>
             <p className="text-xl text-secondary-600 max-w-2xl mx-auto">Experience excellence in every aspect of our service</p>
           </div>
 
@@ -242,14 +242,14 @@ const Home = () => {
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-display font-bold mb-6 gradient-text animate-fade-in">
-                About JDE Electronics
+                About JBE Jai Bhawani Electrical & hardware
               </h2>
               <div className="w-24 h-1 bg-gradient-to-r from-primary-500 to-accent-500 mx-auto rounded-full"></div>
             </div>
             <div className="grid lg:grid-cols-2 gap-16 items-center">
               <div className="space-y-6 animate-slide-in-left">
                 <p className="text-lg text-secondary-700 leading-relaxed">
-                  Founded with a passion for electronics, Jitendra Dhawal Electronics has been serving customers
+                  Founded with a passion for electronics, Jai Bhawani Electrical & hardware has been serving customers
                   with high-quality electronic components for over a decade. We specialize in providing pipes,
                   wires, switches, lights, fans, and a wide range of other electronic items to meet all your needs.
                 </p>
