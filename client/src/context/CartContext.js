@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState, useEffect } from 'react';
+import React, { createContext, useContext, useState, useEffect, useCallback, useMemo } from 'react';
 import axios from 'axios';
 import { useAuth } from './AuthContext';
 import { toast } from 'react-toastify';
@@ -12,15 +12,7 @@ export const CartProvider = ({ children }) => {
   const [loading, setLoading] = useState(false);
   const { user } = useAuth();
 
-  useEffect(() => {
-    if (user) {
-      loadCart();
-    } else {
-      setCart({ items: [], totalPrice: 0 });
-    }
-  }, [user]);
-
-  const loadCart = async () => {
+  const loadCart = useCallback(async () => {
     try {
       setLoading(true);
       const res = await axios.get('/api/cart');
@@ -30,9 +22,17 @@ export const CartProvider = ({ children }) => {
     } finally {
       setLoading(false);
     }
-  };
+  }, []);
 
-  const addToCart = async (productId, quantity = 1) => {
+  useEffect(() => {
+    if (user) {
+      loadCart();
+    } else {
+      setCart({ items: [], totalPrice: 0 });
+    }
+  }, [user, loadCart]);
+
+  const addToCart = useCallback(async (productId, quantity = 1) => {
     try {
       setLoading(true);
       const res = await axios.post('/api/cart', { productId, quantity });
@@ -43,9 +43,9 @@ export const CartProvider = ({ children }) => {
     } finally {
       setLoading(false);
     }
-  };
+  }, []);
 
-  const removeFromCart = async (productId) => {
+  const removeFromCart = useCallback(async (productId) => {
     try {
       setLoading(true);
       const res = await axios.delete(`/api/cart/${productId}`);
@@ -56,9 +56,9 @@ export const CartProvider = ({ children }) => {
     } finally {
       setLoading(false);
     }
-  };
+  }, []);
 
-  const updateCartItem = async (productId, quantity) => {
+  const updateCartItem = useCallback(async (productId, quantity) => {
     try {
       setLoading(true);
       const res = await axios.put(`/api/cart/${productId}`, { quantity });
@@ -69,22 +69,24 @@ export const CartProvider = ({ children }) => {
     } finally {
       setLoading(false);
     }
-  };
+  }, []);
 
-  const clearCart = () => {
+  const clearCart = useCallback(() => {
     setCart({ items: [], totalPrice: 0 });
-  };
+  }, []);
+
+  const value = useMemo(() => ({
+    cart,
+    loading,
+    addToCart,
+    removeFromCart,
+    updateCartItem,
+    clearCart,
+    loadCart
+  }), [cart, loading, addToCart, removeFromCart, updateCartItem, clearCart, loadCart]);
 
   return (
-    <CartContext.Provider value={{
-      cart,
-      loading,
-      addToCart,
-      removeFromCart,
-      updateCartItem,
-      clearCart,
-      loadCart
-    }}>
+    <CartContext.Provider value={value}>
       {children}
     </CartContext.Provider>
   );

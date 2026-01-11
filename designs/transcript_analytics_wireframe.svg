@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+  <style>
+    .bg{fill:#fff}
+    .panel{fill:#fafbfc;stroke:#e5e9ec}
+    .title{font:700 18px 'Helvetica Neue', Arial;fill:#111}
+    .muted{font:400 13px 'Helvetica Neue', Arial;fill:#555}
+    .chip{fill:#e9f6ef;stroke:#cdebd5}
+  </style>
+  <rect class="bg" width="1200" height="800"/>
+  <text x="28" y="36" class="title">Transcript & Analytics</text>
+
+  <!-- Transcript area -->
+  <rect x="28" y="60" width="740" height="680" rx="8" class="panel"/>
+  <text x="48" y="92" class="muted">Live transcript (search · export)</text>
+  <g transform="translate(48,120)">
+    <text x="0" y="0" class="muted">00:00 Alice: Welcome to the meeting...</text>
+    <text x="0" y="28" class="muted">00:10 Bob: Our progress this week...</text>
+    <text x="0" y="56" class="muted">00:22 AI: Summary: Tasks completed include...</text>
+  </g>
+
+  <!-- Right: Analytics -->
+  <rect x="780" y="60" width="392" height="320" rx="8" class="panel"/>
+  <text x="800" y="92" class="title">Analytics</text>
+  <text x="800" y="120" class="muted">Speaker time</text>
+  <rect x="800" y="140" width="320" height="18" fill="#eaf8f1"/>
+  <text x="800" y="170" class="muted">Sentiment: Positive</text>
+
+  <!-- Bottom: Key actions and summary -->
+  <rect x="780" y="400" width="392" height="340" rx="8" class="panel"/>
+  <text x="800" y="428" class="title">Auto Summary</text>
+  <text x="800" y="458" class="muted">• 3 action items</text>
+  <text x="800" y="488" class="muted">• Decisions: Proceed to phase 2</text>
+  <text x="800" y="518" class="muted">• Owner: Alice</text>
+
+</svg>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="900" viewBox="0 0 800 900">
+  <style>
+    .bg{fill:#fff}
+    .panel{fill:#f5f7f9;stroke:#e0e6ea}
+    .title{font:700 18px 'Helvetica Neue', Arial;fill:#111}
+    .muted{font:400 14px 'Helvetica Neue', Arial;fill:#444}
+    .label{font:600 13px 'Helvetica Neue', Arial;fill:#333}
+    .control{fill:#fff;stroke:#dcdfe3}
+    .save{fill:#0b6e4f;rx:6}
+    .saveText{font:600 13px 'Helvetica Neue', Arial;fill:#fff}
+  </style>
+  <rect class="bg" width="800" height="900"/>
+  <text x="28" y="38" class="title">AI Agent Settings</text>
+  <rect x="28" y="60" width="744" height="760" rx="8" class="panel"/>
+
+  <text x="48" y="106" class="label">Enable Agent</text>
+  <rect x="48" y="116" width="40" height="24" rx="4" class="control"/>
+  <text x="110" y="134" class="muted">(toggle)</text>
+
+  <text x="48" y="170" class="label">Role</text>
+  <rect x="48" y="180" width="220" height="36" class="control"/>
+  <text x="56" y="206" class="muted">Assistant / Moderator / Summarizer</text>
+
+  <text x="48" y="240" class="label">STT Provider</text>
+  <rect x="48" y="252" width="300" height="36" class="control"/>
+  <text x="56" y="278" class="muted">Deepgram (selected)</text>
+
+  <text x="48" y="320" class="label">LLM</text>
+  <rect x="48" y="332" width="300" height="36" class="control"/>
+  <text x="56" y="358" class="muted">Gemini</text>
+
+  <text x="48" y="400" class="label">TTS Voice</text>
+  <rect x="48" y="412" width="300" height="36" class="control"/>
+  <text x="56" y="438" class="muted">Deepgram Voice - Male 1 (preview)</text>
+
+  <text x="48" y="500" class="label">Context Window</text>
+  <rect x="48" y="512" width="220" height="36" class="control"/>
+  <text x="56" y="538" class="muted">Last 5 minutes</text>
+
+  <text x="48" y="580" class="label">Privacy & Logging</text>
+  <rect x="48" y="592" width="300" height="36" class="control"/>
+  <text x="56" y="618" class="muted">Store transcripts: Yes / No</text>
+
+  <rect x="48" y="680" width="120" height="40" class="save"/>
+  <text x="88" y="708" class="saveText">Save</text>
+  <rect x="188" y="680" width="120" height="40" stroke="#dcdfe3" fill="#fff" rx="6"/>
+  <text x="230" y="708" class="muted">Cancel</text>
+
+</svg>

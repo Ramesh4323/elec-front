@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 1400 1000" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <!-- Title -->
+  <text x="700" y="40" font-size="24" font-weight="bold" fill="#1a1a1a" text-anchor="middle">Design Guidelines & Specifications</text>
+  
+  <!-- Global Styling -->
+  <g transform="translate(50, 80)">
+    <text x="0" y="0" font-size="14" font-weight="bold" fill="#0B6E4F">Global Styling</text>
+    
+    <text x="0" y="30" font-size="11" fill="#333">✓ Clean, modern, bright UI</text>
+    <text x="0" y="50" font-size="11" fill="#333">✓ Soft gradients: blue, white, light peach circles</text>
+    <text x="0" y="70" font-size="11" fill="#333">✓ Rounded cards: 24px radius (16px minimum)</text>
+    <text x="0" y="90" font-size="11" fill="#333">✓ Shadows: soft, smooth blur effect</text>
+    <text x="0" y="110" font-size="11" fill="#333">✓ Button radius: 8-12px, bold text, white fill</text>
+    <text x="0" y="130" font-size="11" fill="#333">✓ Spacing: 16px grid baseline</text>
+    <text x="0" y="150" font-size="11" fill="#333">✓ Icons: emoji for quick visual representation</text>
+  </g>
+  
+  <!-- Typography -->
+  <g transform="translate(50, 280)">
+    <text x="0" y="0" font-size="14" font-weight="bold" fill="#0B6E4F">Typography</text>
+    
+    <text x="0" y="30" font-size="11" fill="#333">Headings:</text>
+    <text x="20" y="50" font-size="11" fill="#666">H1: 28-48px, Bold, #1a1a1a</text>
+    <text x="20" y="70" font-size="11" fill="#666">H2: 18-24px, Bold, #1a1a1a</text>
+    <text x="20" y="90" font-size="11" fill="#666">H3: 14-16px, Bold, #333</text>
+    
+    <text x="0" y="125" font-size="11" fill="#333">Body Text:</text>
+    <text x="20" y="145" font-size="11" fill="#666">Regular: 13-14px, #333</text>
+    <text x="20" y="165" font-size="11" fill="#666">Secondary: 12px, #666</text>
+    <text x="20" y="185" font-size="11" fill="#666">Meta: 10-11px, #999</text>
+  </g>
+  
+  <!-- Spacing & Layout -->
+  <g transform="translate(50, 500)">
+    <text x="0" y="0" font-size="14" font-weight="bold" fill="#0B6E4F">Spacing & Layout</text>
+    
+    <text x="0" y="30" font-size="11" fill="#333">Padding: 8px, 12px, 16px, 24px, 32px</text>
+    <text x="0" y="50" font-size="11" fill="#333">Margin: 8px, 12px, 16px, 24px</text>
+    <text x="0" y="70" font-size="11" fill="#333">Card gap: 24px horizontal, 20px vertical</text>
+    <text x="0" y="90" font-size="11" fill="#333">Border radius: 6px (small), 12px (medium), 16px (large), 24px (extra)</text>
+    <text x="0" y="110" font-size="11" fill="#333">Line height: 1.2 (headings), 1.6 (body)</text>
+  </g>
+  
+  <!-- Color System -->
+  <g transform="translate(400, 80)">
+    <text x="0" y="0" font-size="14" font-weight="bold" fill="#0B6E4F">Color System</text>
+    
+    <text x="0" y="30" font-size="11" fill="#333">Primary Blue: #007BFF</text>
+    <rect x="0" y="40" width="100" height="40" fill="#007BFF" rx="4"/>
+    
+    <text x="120" y="30" font-size="11" fill="#333">Accent Orange: #FF7A00</text>
+    <rect x="120" y="40" width="100" height="40" fill="#FF7A00" rx="4"/>
+    
+    <text x="0" y="100" font-size="11" fill="#333">Teal: #17C3C0</text>
+    <rect x="0" y="110" width="100" height="40" fill="#17C3C0" rx="4"/>
+    
+    <text x="120" y="100" font-size="11" fill="#333">Success Green: #4CAF50</text>
+    <rect x="120" y="110" width="100" height="40" fill="#4CAF50" rx="4"/>
+    
+    <text x="0" y="170" font-size="11" fill="#333">Background Light: #f5f5f5</text>
+    <rect x="0" y="180" width="100" height="40" fill="#f5f5f5" stroke="#ddd" rx="4"/>
+    
+    <text x="120" y="170" font-size="11" fill="#333">Border Gray: #e0e0e0</text>
+    <rect x="120" y="180" width="100" height="40" fill="white" stroke="#e0e0e0" stroke-width="1" rx="4"/>
+  </g>
+  
+  <!-- Interactive Elements -->
+  <g transform="translate(400, 280)">
+    <text x="0" y="0" font-size="14" font-weight="bold" fill="#0B6E4F">Interactive Elements</text>
+    
+    <text x="0" y="30" font-size="11" fill="#333">Form Inputs:</text>
+    <text x="20" y="50" font-size="11" fill="#666">Height: 40px, Padding: 12px</text>
+    <text x="20" y="70" font-size="11" fill="#666">Border: 1px #e0e0e0, Radius: 8px</text>
+    <text x="20" y="90" font-size="11" fill="#666">Background: #f5f5f5, Focus: #007BFF</text>
+    
+    <text x="0" y="135" font-size="11" fill="#333">Badges:</text>
+    <text x="20" y="155" font-size="11" fill="#666">Height: 20-24px, Padding: 4px 12px</text>
+    <text x="20" y="175" font-size="11" fill="#666">Radius: 6-8px, Font: 10-11px bold</text>
+    
+    <text x="0" y="210" font-size="11" fill="#333">Quantity Selectors:</text>
+    <text x="20" y="230" font-size="11" fill="#666">Buttons: 30-35px square, border: 1px #ddd</text>
+  </g>
+  
+  <!-- Shadow & Effects -->
+  <g transform="translate(400, 500)">
+    <text x="0" y="0" font-size="14" font-weight="bold" fill="#0B6E4F">Shadow & Effects</text>
+    
+    <text x="0" y="30" font-size="11" fill="#333">Card Shadow: 0 2px 8px rgba(0,0,0,0.1)</text>
+    <text x="0" y="50" font-size="11" fill="#333">Hover Effect: Slight lift + shadow increase</text>
+    <text x="0" y="70" font-size="11" fill="#333">Border Style: 1px solid #e0e0e0</text>
+    <text x="0" y="90" font-size="11" fill="#333">Focus State: 2px solid #007BFF outline</text>
+    <text x="0" y="110" font-size="11" fill="#333">Transitions: 200ms ease for all interactions</text>
+  </g>
+  
+  <!-- Responsive Design -->
+  <g transform="translate(750, 80)">
+    <text x="0" y="0" font-size="14" font-weight="bold" fill="#0B6E4F">Responsive Design</text>
+    
+    <text x="0" y="30" font-size="11" fill="#333">Desktop: 1400px (full layout)</text>
+    <text x="0" y="50" font-size="11" fill="#333">Tablet: 768px (stacked cards)</text>
+    <text x="0" y="70" font-size="11" fill="#333">Mobile: 320px (single column)</text>
+    <text x="0" y="90" font-size="11" fill="#333">Grid: 4 columns (desktop) → 2 (tablet) → 1 (mobile)</text>
+    <text x="0" y="110" font-size="11" fill="#333">Font scaling: -2px on tablet, -4px on mobile</text>
+  </g>
+  
+  <!-- Component Auto-Layout -->
+  <g transform="translate(750, 280)">
+    <text x="0" y="0" font-size="14" font-weight="bold" fill="#0B6E4F">Component Auto-Layout</text>
+    
+    <text x="0" y="30" font-size="11" fill="#333">✓ Navbar: Horizontal, space-between</text>
+    <text x="0" y="50" font-size="11" fill="#333">✓ Product Card: Vertical, gap 12px</text>
+    <text x="0" y="70" font-size="11" fill="#333">✓ Product Grid: Horizontal wrap, gap 24px</text>
+    <text x="0" y="90" font-size="11" fill="#333">✓ Form Fields: Vertical stack, gap 16px</text>
+    <text x="0" y="110" font-size="11" fill="#333">✓ Order Summary: Vertical, gap 12px</text>
+  </g>
+  
+  <!-- Export Notes -->
+  <g transform="translate(750, 500)">
+    <text x="0" y="0" font-size="14" font-weight="bold" fill="#0B6E4F">Export & Implementation</text>
+    
+    <text x="0" y="30" font-size="11" fill="#333">✓ Export as SVG for scalability</text>
+    <text x="0" y="50" font-size="11" fill="#333">✓ Create Figma components with variants</text>
+    <text x="0" y="70" font-size="11" fill="#333">✓ Use constraints for responsive behavior</text>
+    <text x="0" y="90" font-size="11" fill="#333">✓ Maintain grid system (16px baseline)</text>
+    <text x="0" y="110" font-size="11" fill="#333">✓ Document all color + typography styles</text>
+  </g>
+</svg>

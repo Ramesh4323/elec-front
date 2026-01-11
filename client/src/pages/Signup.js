@@ -10,13 +10,12 @@ const Signup = () => {
     email: '',
     password: '',
     confirmPassword: '',
-    role: 'user',
   });
   const [loading, setLoading] = useState(false);
   const { register } = useAuth();
   const navigate = useNavigate();
 
-  const { name, email, password, confirmPassword, role } = formData;
+  const { name, email, password, confirmPassword } = formData;
 
   const onChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -38,7 +37,7 @@ const Signup = () => {
     setLoading(true);
 
     try {
-      await register(name, email, password, role);
+      await register(name, email, password);
       toast.success('Registration successful!');
       navigate('/');
     } catch (error) {
@@ -145,21 +144,7 @@ const Signup = () => {
                 />
               </div>
             </div>
-            <div>
-              <label htmlFor="role" className="block text-sm font-semibold text-secondary-700 mb-2">
-                Account Type
-              </label>
-              <select
-                id="role"
-                name="role"
-                className="w-full px-4 py-4 bg-white border-2 border-secondary-200 rounded-2xl focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all duration-300 hover:border-primary-400 hover:shadow-lg text-secondary-800 font-medium"
-                value={role}
-                onChange={onChange}
-              >
-                <option value="user">Customer</option>
-                <option value="admin">Admin</option>
-              </select>
-            </div>
+
           </div>
 
           <div>
@@ -191,8 +176,8 @@ const Signup = () => {
             </Link>
           </p>
         </div>
-      </div>
-    </div>
+      </div >
+    </div >
   );
 };
 

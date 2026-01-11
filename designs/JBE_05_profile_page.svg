@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 1400 900" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <linearGradient id="bgGradient5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f0f7ff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#fff5f0;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="logoGradient5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#007BFF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FF7A00;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1400" height="900" fill="url(#bgGradient5)"/>
+  
+  <!-- Navbar -->
+  <rect width="1400" height="70" fill="white" stroke="#e0e0e0" stroke-width="1"/>
+  <circle cx="60" cy="35" r="22" fill="url(#logoGradient5)"/>
+  <text x="60" y="42" font-size="24" fill="white" text-anchor="middle" font-weight="bold">⚡</text>
+  <text x="100" y="42" font-size="16" font-weight="bold" fill="#1a1a1a">JBE</text>
+  <text x="400" y="42" font-size="14" fill="#333">Home</text>
+  <text x="500" y="42" font-size="14" fill="#333">Shop</text>
+  <text x="580" y="42" font-size="14" fill="#333">Cart</text>
+  <text x="650" y="42" font-size="14" fill="#007BFF" font-weight="bold">Profile</text>
+  <text x="1080" y="42" font-size="13" fill="#666">Welcome, Admin User</text>
+  
+  <!-- Page Title -->
+  <text x="60" y="130" font-size="28" font-weight="bold" fill="#1a1a1a">My Profile</text>
+  
+  <!-- Left: Account Information Card -->
+  <g transform="translate(60, 160)">
+    <rect x="0" y="0" width="550" height="650" fill="white" stroke="#e0e0e0" stroke-width="1" rx="16"/>
+    
+    <!-- Card Title -->
+    <text x="30" y="35" font-size="18" font-weight="bold" fill="#1a1a1a">Account Information</text>
+    
+    <line x1="30" y1="50" x2="520" y2="50" stroke="#e0e0e0" stroke-width="1"/>
+    
+    <!-- Profile Avatar -->
+    <circle cx="280" cy="130" r="50" fill="url(#logoGradient)"/>
+    <text x="280" y="150" font-size="48" fill="white" text-anchor="middle">👤</text>
+    
+    <!-- User Name -->
+    <text x="30" y="220" font-size="12" fill="#666">Full Name</text>
+    <rect x="30" y="225" width="490" height="40" fill="#f5f5f5" stroke="#e0e0e0" stroke-width="1" rx="8"/>
+    <text x="45" y="250" font-size="14" fill="#1a1a1a">Admin User</text>
+    
+    <!-- Email -->
+    <text x="30" y="295" font-size="12" fill="#666">Email Address</text>
+    <rect x="30" y="300" width="490" height="40" fill="#f5f5f5" stroke="#e0e0e0" stroke-width="1" rx="8"/>
+    <text x="45" y="325" font-size="14" fill="#1a1a1a">admin@jbestore.com</text>
+    
+    <!-- Role -->
+    <text x="30" y="370" font-size="12" fill="#666">Account Role</text>
+    <rect x="30" y="375" width="490" height="40" fill="#f5f5f5" stroke="#e0e0e0" stroke-width="1" rx="8"/>
+    <text x="45" y="400" font-size="14" fill="#1a1a1a">Administrator</text>
+    
+    <!-- Member Since -->
+    <text x="30" y="445" font-size="12" fill="#666">Member Since</text>
+    <rect x="30" y="450" width="490" height="40" fill="#f5f5f5" stroke="#e0e0e0" stroke-width="1" rx="8"/>
+    <text x="45" y="475" font-size="14" fill="#1a1a1a">January 15, 2024</text>
+    
+    <!-- Action Buttons -->
+    <rect x="30" y="530" width="230" height="40" fill="#007BFF" rx="8"/>
+    <text x="145" y="556" font-size="14" font-weight="bold" fill="white" text-anchor="middle">Edit Profile</text>
+    
+    <rect x="290" y="530" width="230" height="40" fill="white" stroke="#007BFF" stroke-width="2" rx="8"/>
+    <text x="405" y="556" font-size="14" font-weight="bold" fill="#007BFF" text-anchor="middle">Change Password</text>
+  </g>
+  
+  <!-- Right: Order History Card -->
+  <g transform="translate(650, 160)">
+    <rect x="0" y="0" width="680" height="650" fill="white" stroke="#e0e0e0" stroke-width="1" rx="16"/>
+    
+    <!-- Card Title -->
+    <text x="30" y="35" font-size="18" font-weight="bold" fill="#1a1a1a">Order History</text>
+    
+    <line x1="30" y1="50" x2="650" y2="50" stroke="#e0e0e0" stroke-width="1"/>
+    
+    <!-- Table Header -->
+    <text x="30" y="85" font-size="12" font-weight="bold" fill="#666">Order ID</text>
+    <text x="150" y="85" font-size="12" font-weight="bold" fill="#666">Date</text>
+    <text x="280" y="85" font-size="12" font-weight="bold" fill="#666">Amount</text>
+    <text x="400" y="85" font-size="12" font-weight="bold" fill="#666">Status</text>
+    <text x="570" y="85" font-size="12" font-weight="bold" fill="#666">Action</text>
+    
+    <line x1="30" y1="100" x2="650" y2="100" stroke="#e0e0e0" stroke-width="1"/>
+    
+    <!-- Order Row 1 -->
+    <text x="30" y="135" font-size="12" fill="#333">#ORD-10245</text>
+    <text x="150" y="135" font-size="12" fill="#666">Nov 24, 2024</text>
+    <text x="280" y="135" font-size="12" fill="#333">₹2,450</text>
+    
+    <rect x="400" y="120" width="80" height="24" fill="#4CAF50" rx="6"/>
+    <text x="440" y="137" font-size="11" font-weight="bold" fill="white" text-anchor="middle">Delivered</text>
+    
+    <text x="570" y="135" font-size="12" fill="#007BFF" font-weight="bold" cursor="pointer">View</text>
+    
+    <!-- Order Row 2 -->
+    <text x="30" y="175" font-size="12" fill="#333">#ORD-10244</text>
+    <text x="150" y="175" font-size="12" fill="#666">Nov 22, 2024</text>
+    <text x="280" y="175" font-size="12" fill="#333">₹3,890</text>
+    
+    <rect x="400" y="160" width="80" height="24" fill="#FF9800" rx="6"/>
+    <text x="440" y="177" font-size="11" font-weight="bold" fill="white" text-anchor="middle">Processing</text>
+    
+    <text x="570" y="175" font-size="12" fill="#007BFF" font-weight="bold" cursor="pointer">View</text>
+    
+    <!-- Order Row 3 -->
+    <text x="30" y="215" font-size="12" fill="#333">#ORD-10243</text>
+    <text x="150" y="215" font-size="12" fill="#666">Nov 20, 2024</text>
+    <text x="280" y="215" font-size="12" fill="#333">₹1,200</text>
+    
+    <rect x="400" y="200" width="80" height="24" fill="#4CAF50" rx="6"/>
+    <text x="440" y="217" font-size="11" font-weight="bold" fill="white" text-anchor="middle">Delivered</text>
+    
+    <text x="570" y="215" font-size="12" fill="#007BFF" font-weight="bold" cursor="pointer">View</text>
+    
+    <!-- Order Row 4 -->
+    <text x="30" y="255" font-size="12" fill="#333">#ORD-10242</text>
+    <text x="150" y="255" font-size="12" fill="#666">Nov 18, 2024</text>
+    <text x="280" y="255" font-size="12" fill="#333">₹5,670</text>
+    
+    <rect x="400" y="240" width="80" height="24" fill="#2196F3" rx="6"/>
+    <text x="440" y="257" font-size="11" font-weight="bold" fill="white" text-anchor="middle">Shipped</text>
+    
+    <text x="570" y="255" font-size="12" fill="#007BFF" font-weight="bold" cursor="pointer">View</text>
+    
+    <!-- Empty State Message -->
+    <text x="340" y="380" font-size="14" fill="#999" text-anchor="middle">More orders will appear here</text>
+    
+    <!-- View All Orders Button -->
+    <rect x="230" y="420" width="220" height="40" fill="#007BFF" rx="8"/>
+    <text x="340" y="446" font-size="14" font-weight="bold" fill="white" text-anchor="middle">View All Orders</text>
+    
+    <!-- Logout Button -->
+    <rect x="230" y="550" width="220" height="40" fill="white" stroke="#FF6B6B" stroke-width="2" rx="8"/>
+    <text x="340" y="576" font-size="14" font-weight="bold" fill="#FF6B6B" text-anchor="middle">Logout</text>
+  </g>
+</svg>

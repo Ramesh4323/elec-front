@@ -20,7 +20,37 @@ A complete eCommerce website for an electronics shop selling pipes, wires, switc
 - **Backend**: Node.js, Express.js, MongoDB, Mongoose
 - **Authentication**: JWT, bcryptjs
 - **File Upload**: Multer
-- **Deployment**: Vercel/Netlify (frontend), Render/Railway (backend)
+
+## Hardware Requirements
+
+- **Processor**: Dual-core processor or higher
+- **Memory**: Minimum 4 GB RAM (8 GB recommended for smoother real-time processing)
+- **Internet**: Stable high-speed internet connection for continuous data streaming
+- **Audio Equipment**: Microphone and speakers/headset for clear communication
+- **Optional**: Webcam for future video-based AI communication
+
+## Software Requirements
+
+- **Operating System**: Windows / macOS / Linux
+- **Frontend Framework**: Next.js and React.js
+- **Backend Environment**: Node.js with LiveKit Agents SDK
+- **Real-time Communication Platform**: LiveKit Server or LiveKit Cloud
+- **AI Services**:
+   - Deepgram Speech-to-Text
+   - Google Gemini LLM
+   - Deepgram Text-to-Speech
+- **Development Tools**: Visual Studio Code, Postman, Git & GitHub
+
+## Functional Requirements
+
+- **Voice Rooms**: Ability for users to create and join voice rooms (channels) with unique IDs and access control.
+- **Real-time Audio Capture & Streaming**: Capture audio from user microphone and stream it in real time to the audio routing service (LiveKit) and STT service.
+- **Multi-user Recognition**: Support multiple simultaneous speakers with per-speaker identification and handling for concurrent speech.
+- **Instant AI Responses**: Generate AI responses via the STT → LLM → TTS pipeline and play synthesized speech back into the room with minimal latency.
+- **STT → LLM → TTS Pipeline**: Seamless integration where Deepgram (STT) transcribes audio, Google Gemini handles the semantic/LLM processing, and Deepgram (TTS) or another TTS provider synthesizes the LLM output.
+- **Latency and Reliability**: Low-latency streaming path and retry/queueing for transient failures in any pipeline stage.
+- **Role & Access Controls**: Room host and participant roles with basic moderation capabilities (mute/remove users).
+- **Logging & Monitoring**: Track session metadata, transcripts, and AI-generated responses for debugging and analytics.
 
 ## Setup Instructions
 
@@ -172,19 +202,6 @@ This will start both the backend server (http://localhost:5000) and frontend (ht
 ├── README.md
 └── TODO.md
 ```
-
-## Deployment
-
-### Backend (Render/Railway)
-1. Push code to GitHub
-2. Connect repository to Render/Railway
-3. Set environment variables
-4. Deploy
-
-### Frontend (Vercel/Netlify)
-1. Build the React app: `npm run build`
-2. Upload `build` folder to Vercel/Netlify
-3. Set API base URL to deployed backend
 
 ## Sample Data
 

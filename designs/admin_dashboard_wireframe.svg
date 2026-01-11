@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900" viewBox="0 0 1400 900">
+  <style>
+    .bg{fill:#fff}
+    .nav{fill:#f3f6f8;stroke:#dde3e8}
+    .card{fill:#fafafa;stroke:#e6e9ec}
+    .title{font:700 20px 'Helvetica Neue', Arial;fill:#111}
+    .muted{font:400 14px 'Helvetica Neue', Arial;fill:#555}

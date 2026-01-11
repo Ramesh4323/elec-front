@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 1400 600" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f0f7ff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#fff5f0;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#007BFF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FF7A00;stop-opacity:1" />
+    </linearGradient>
+    <circle id="bgCircle1" cx="100" cy="100" r="150" fill="#E3F2FD" opacity="0.3"/>
+    <circle id="bgCircle2" cx="1300" cy="800" r="200" fill="#FFE4CC" opacity="0.2"/>
+  </defs>
+  
+  <!-- Background decorative circles -->
+  <use href="#bgCircle1"/>
+  <use href="#bgCircle2"/>
+  <circle cx="200" cy="750" r="120" fill="#E0F7FA" opacity="0.2"/>
+  
+  <!-- Background -->
+  <rect width="1400" height="900" fill="url(#bgGradient)"/>
+  
+  <!-- Centered Login Card -->
+  <g transform="translate(700, 450)">
+    <!-- Card background with shadow -->
+    <rect x="-300" y="-350" width="600" height="700" fill="#ffffff" rx="24" stroke="#e0e0e0" stroke-width="1"/>
+    
+    <!-- User Icon (Blue-Orange Gradient Circle) -->
+    <circle cx="0" cy="-220" r="50" fill="url(#logoGradient)"/>
+    <text x="0" y="-200" font-size="60" fill="white" text-anchor="middle" font-weight="bold">👤</text>
+    
+    <!-- Title -->
+    <text x="0" y="-120" font-size="32" font-weight="bold" fill="#1a1a1a" text-anchor="middle">Welcome Back</text>
+    
+    <!-- Subtitle -->
+    <text x="0" y="-80" font-size="14" fill="#666" text-anchor="middle">Sign in to access your JBE account</text>
+    
+    <!-- Email Field -->
+    <rect x="-250" y="-40" width="500" height="50" fill="#f5f5f5" rx="12" stroke="#e0e0e0" stroke-width="1"/>
+    <text x="-240" y="-10" font-size="16" fill="#999">📧 Email Address</text>
+    <text x="-240" y="20" font-size="13" fill="#ccc">Enter your email</text>
+    
+    <!-- Password Field -->
+    <rect x="-250" y="60" width="500" height="50" fill="#f5f5f5" rx="12" stroke="#e0e0e0" stroke-width="1"/>
+    <text x="-240" y="90" font-size="16" fill="#999">🔒 Password</text>
+    <text x="-240" y="120" font-size="13" fill="#ccc">Enter your password</text>
+    
+    <!-- Sign In Button -->
+    <rect x="-200" y="150" width="400" height="50" fill="#007BFF" rx="12"/>
+    <text x="0" y="185" font-size="18" font-weight="bold" fill="white" text-anchor="middle">Sign In</text>
+    
+    <!-- Sign Up Link -->
+    <text x="0" y="260" font-size="14" fill="#007BFF" text-anchor="middle" cursor="pointer">Don't have an account? <tspan font-weight="bold">Sign up here</tspan></text>
+  </g>
+</svg>

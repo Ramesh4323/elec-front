@@ -6,7 +6,7 @@ const jwt = require('jsonwebtoken');
 // @access  Public
 const register = async (req, res) => {
   try {
-    const { name, email, password, role } = req.body;
+    const { name, email, password } = req.body;
 
     // Check if user exists
     const userExists = await User.findOne({ email });
@@ -22,7 +22,7 @@ const register = async (req, res) => {
       name,
       email,
       password,
-      role: role || 'user',
+      role: 'user',
     });
 
     // Create token

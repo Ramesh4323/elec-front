@@ -1,6 +1,10 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
 import axios from 'axios';
 
+// Set the base URL for all axios requests
+const baseURL = 'http://localhost:5000';
+axios.defaults.baseURL = baseURL;
+
 const AuthContext = createContext();
 
 export const useAuth = () => useContext(AuthContext);
@@ -39,8 +43,8 @@ export const AuthProvider = ({ children }) => {
     return data;
   };
 
-  const register = async (name, email, password, role = 'user') => {
-    const res = await axios.post('/api/users/register', { name, email, password, role });
+  const register = async (name, email, password) => {
+    const res = await axios.post('/api/users/register', { name, email, password });
     const { token, data } = res.data;
     localStorage.setItem('token', token);
     axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;

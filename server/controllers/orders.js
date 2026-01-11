@@ -38,6 +38,30 @@ const createOrder = async (req, res) => {
       }
     }
 
+    // Verify stock and calculate final price (optional, but good for security)
+    for (const item of items) {
+      const product = await Product.findById(item.product);
+      if (!product) {
+        return res.status(404).json({
+          success: false,
+          message: `Product not found: ${item.name}`,
+        });
+      }
+      if (product.stock < item.quantity) {
+        return res.status(400).json({
+          success: false,
+          message: `Insufficient stock for ${item.name}. Only ${product.stock} left.`,
+        });
+      }
+    }
+
+    // Decrement stock
+    for (const item of items) {
+      const product = await Product.findById(item.product);
+      product.stock -= item.quantity;
+      await product.save();
+    }
+
     const order = new Order({
       user: req.user._id,
       orderItems: items,
@@ -49,6 +73,9 @@ const createOrder = async (req, res) => {
     });
 
     const createdOrder = await order.save();
+
+    // Mock Email Service
+    console.log(`[MOCK EMAIL] To: ${req.user.email} | Subject: Order Confirmed #${createdOrder._id} | Body: Thank you for your order! Total: ${createdOrder.totalPrice}`);
 
     // Clear user's cart after order creation
     await Cart.findOneAndUpdate(
@@ -191,6 +218,12 @@ const updateOrderStatus = async (req, res) => {
     order.status = status;
 
     const updatedOrder = await order.save();
+
+    // Mock Email Service
+    const user = await require('../models/User').findById(order.user);
+    if (user) {
+      console.log(`[MOCK EMAIL] To: ${user.email} | Subject: Order Status Updated | Body: Your order #${order._id} is now ${status}.`);
+    }
 
     res.status(200).json({
       success: true,

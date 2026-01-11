@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900" viewBox="0 0 1400 900">
+  <style>
+    .bg{fill:#fff}
+    .panel{fill:#f4f6f8;stroke:#d7dce0}
+    .title{font:700 20px/1.2 'Helvetica Neue', Arial;fill:#111}
+    .muted{font:400 14px/1.2 'Helvetica Neue', Arial;fill:#666}
+    .aiBadge{fill:#f0f8f3;stroke:#8fd3b6}
+    .btn{fill:#0b6e4f;rx:6;ry:6}
+    .btnText{font:600 13px 'Helvetica Neue', Arial;fill:#fff}
+  </style>
+  <rect class="bg" width="1400" height="900"/>
+  <!-- Header -->
+  <rect x="0" y="0" width="1400" height="72" fill="#0b6e4f"/>
+  <text x="24" y="44" class="title" fill="#fff">Room: Team Sync</text>
+  <rect x="1200" y="18" width="120" height="36" class="btn"/>
+  <text x="1260" y="44" class="btnText">Leave</text>
+
+  <!-- Left: Participants -->
+  <rect x="20" y="92" width="220" height="720" class="panel" rx="8"/>
+  <text x="40" y="120" class="title">Participants</text>
+  <g transform="translate(40,140)">
+    <circle cx="20" cy="20" r="18" fill="#e6eef6" stroke="#c7d7e8"/>
+    <text x="50" y="26" class="muted">You (speaking)</text>
+    <circle cx="20" cy="70" r="18" fill="#fff" stroke="#c7d7e8"/>
+    <text x="50" y="76" class="muted">Alice</text>
+    <circle cx="20" cy="120" r="18" fill="#fff" stroke="#c7d7e8"/>
+    <text x="50" y="126" class="muted">Bob</text>
+    <circle cx="20" cy="170" r="18" fill="#eaf8f1" stroke="#8fd3b6"/>
+    <text x="50" y="176" class="muted">AI Agent</text>
+  </g>
+
+  <!-- Center: Live Transcript and conversation -->
+  <rect x="260" y="92" width="780" height="620" rx="8" fill="#fff" stroke="#e6e6e6"/>
+  <text x="280" y="120" class="title">Live Transcript</text>
+  <text x="280" y="145" class="muted">(auto-scrolls; speaker labels shown)</text>
+  <g transform="translate(280,170)">
+    <rect x="0" y="0" width="740" height="90" fill="#fafafa" stroke="#ededed" rx="6"/>
+    <text x="12" y="24" class="muted">00:00 Alice: Hi team, the update for...</text>
+    <text x="12" y="48" class="muted">00:08 Bob: We completed the testing...</text>
+    <rect x="0" y="110" width="740" height="90" fill="#fff" stroke="#ededed" rx="6"/>
+    <text x="12" y="134" class="muted">00:21 AI: I can summarize the last 5 minutes.</text>
+  </g>
+
+  <!-- Right: Controls & AI Pane -->
+  <rect x="1060" y="92" width="320" height="540" class="panel" rx="8"/>
+  <text x="1080" y="120" class="title">AI Controls</text>
+  <text x="1080" y="150" class="muted">Agent: <tspan class="title">ON</tspan></text>
+  <rect x="1080" y="170" width="200" height="36" rx="6" fill="#fff" stroke="#dfe6ea"/>
+  <text x="1096" y="194" class="muted">Mode: Assistant</text>
+  <rect x="1080" y="220" width="200" height="36" rx="6" fill="#fff" stroke="#dfe6ea"/>
+  <text x="1096" y="244" class="muted">TTS Voice: Male-1</text>
+  <rect x="1080" y="270" width="200" height="36" rx="6" fill="#fff" stroke="#dfe6ea"/>
+  <text x="1096" y="294" class="muted">Context window: 5 min</text>
+  <rect x="1080" y="330" width="200" height="36" rx="6" fill="#fff" stroke="#dfe6ea"/>
+  <text x="1096" y="354" class="muted">Store transcript: Yes</text>
+
+  <!-- Bottom: Local Controls -->
+  <rect x="260" y="730" width="780" height="82" rx="8" fill="#f7f9fa" stroke="#e6e9eb"/>
+  <text x="300" y="777" class="muted">[Mic] [Mute] [Share] [Chat]</text>
+
+</svg>

@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import React, { useEffect, useState } from 'react';
+import { FaEdit, FaPlus, FaTrash } from 'react-icons/fa';
 import { toast } from 'react-toastify';
-import { FaEdit, FaTrash, FaPlus } from 'react-icons/fa';
 
 const AdminDashboard = () => {
   const [products, setProducts] = useState([]);
