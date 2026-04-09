@@ -1,8 +1,11 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
 import axios from 'axios';
 
-// Set the base URL for all axios requests
-const baseURL = 'http://localhost:5000';
+// ✅ Use environment variable (for Netlify) OR fallback to Render URL
+const baseURL =
+  process.env.REACT_APP_API_URL || "https://your-backend.onrender.com";
+
+// ✅ Set base URL globally
 axios.defaults.baseURL = baseURL;
 
 const AuthContext = createContext();
@@ -14,9 +17,10 @@ export const AuthProvider = ({ children }) => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const token = localStorage.getItem('token');
+    const token = localStorage.getItem("token");
+
     if (token) {
-      axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
+      axios.defaults.headers.common["Authorization"] = `Bearer ${token}`;
       loadUser();
     } else {
       setLoading(false);
@@ -25,36 +29,46 @@ export const AuthProvider = ({ children }) => {
 
   const loadUser = async () => {
     try {
-      const res = await axios.get('/api/users/me');
+      const res = await axios.get("/api/users/me");
       setUser(res.data.data);
     } catch (error) {
-      localStorage.removeItem('token');
-      delete axios.defaults.headers.common['Authorization'];
+      localStorage.removeItem("token");
+      delete axios.defaults.headers.common["Authorization"];
     }
     setLoading(false);
   };
 
   const login = async (email, password) => {
-    const res = await axios.post('/api/users/login', { email, password });
+    const res = await axios.post("/api/users/login", { email, password });
+
     const { token, data } = res.data;
-    localStorage.setItem('token', token);
-    axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
+
+    localStorage.setItem("token", token);
+    axios.defaults.headers.common["Authorization"] = `Bearer ${token}`;
     setUser(data);
+
     return data;
   };
 
   const register = async (name, email, password) => {
-    const res = await axios.post('/api/users/register', { name, email, password });
+    const res = await axios.post("/api/users/register", {
+      name,
+      email,
+      password,
+    });
+
     const { token, data } = res.data;
-    localStorage.setItem('token', token);
-    axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
+
+    localStorage.setItem("token", token);
+    axios.defaults.headers.common["Authorization"] = `Bearer ${token}`;
     setUser(data);
+
     return data;
   };
 
   const logout = () => {
-    localStorage.removeItem('token');
-    delete axios.defaults.headers.common['Authorization'];
+    localStorage.removeItem("token");
+    delete axios.defaults.headers.common["Authorization"];
     setUser(null);
   };
 
