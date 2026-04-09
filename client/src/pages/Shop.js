@@ -16,22 +16,6 @@ const Shop = () => {
   }, []);
 
   useEffect(() => {
-    filterProducts();
-  }, [products, searchTerm, selectedCategory]);
-
-  const fetchProducts = async () => {
-    try {
-      setLoading(true);
-      const res = await axios.get('/api/products');
-      setProducts(res.data.data);
-    } catch (error) {
-      console.error('Failed to fetch products:', error);
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  const filterProducts = () => {
     let filtered = products;
 
     if (searchTerm) {
@@ -46,6 +30,18 @@ const Shop = () => {
     }
 
     setFilteredProducts(filtered);
+  }, [products, searchTerm, selectedCategory]);
+
+  const fetchProducts = async () => {
+    try {
+      setLoading(true);
+      const res = await axios.get('/api/products');
+      setProducts(res.data.data);
+    } catch (error) {
+      console.error('Failed to fetch products:', error);
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (

@@ -2,12 +2,10 @@ import axios from 'axios';
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
-import { useAuth } from '../context/AuthContext';
 import { useCart } from '../context/CartContext';
 
 const Checkout = () => {
   const { cart, clearCart } = useCart();
-  const { user } = useAuth();
   const navigate = useNavigate();
 
   const [formData, setFormData] = useState({
@@ -49,7 +47,7 @@ const Checkout = () => {
         totalPrice: (cart.totalPrice + 10 + cart.totalPrice * 0.08).toFixed(2),
       };
 
-      const res = await axios.post('/api/orders', orderData);
+      await axios.post('/api/orders', orderData);
       toast.success('Order placed successfully!');
       clearCart();
       navigate('/orders');

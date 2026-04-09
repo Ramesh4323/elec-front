@@ -1,6 +1,11 @@
 const User = require('../models/User');
 const jwt = require('jsonwebtoken');
 
+const getJwtExpiry = () => {
+  const value = process.env.JWT_EXPIRE || '30d';
+  return /^\d+$/.test(value) ? Number(value) : value;
+};
+
 // @desc    Register user
 // @route   POST /api/users/register
 // @access  Public
@@ -27,7 +32,7 @@ const register = async (req, res) => {
 
     // Create token
     const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET, {
-      expiresIn: parseInt(process.env.JWT_EXPIRE),
+      expiresIn: getJwtExpiry(),
     });
 
     res.status(201).json({
@@ -75,7 +80,7 @@ const login = async (req, res) => {
 
     // Create token
     const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET, {
-      expiresIn: parseInt(process.env.JWT_EXPIRE),
+      expiresIn: getJwtExpiry(),
     });
 
     res.status(200).json({

@@ -1,12 +1,15 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
 import axios from 'axios';
 
-// ✅ Use environment variable (for Netlify) OR fallback to Render URL
-const baseURL =
-  process.env.REACT_APP_API_URL || "https://your-backend.onrender.com";
+const envApiUrl = process.env.REACT_APP_API_URL?.trim();
+const isLocalHost =
+  window.location.hostname === 'localhost' ||
+  window.location.hostname === '127.0.0.1';
+const baseURL = envApiUrl || (isLocalHost ? 'http://localhost:5000' : '');
 
-// ✅ Set base URL globally
-axios.defaults.baseURL = baseURL;
+if (baseURL) {
+  axios.defaults.baseURL = baseURL;
+}
 
 const AuthContext = createContext();
 

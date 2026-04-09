@@ -165,6 +165,15 @@ After running the data seed (`cd server && npm run data:import`), you can log in
    - Username (email): `john@example.com`
    - Password: `password`
 
+### Login Troubleshooting (Netlify)
+
+If login fails on deployed frontend, check these first:
+
+1. Netlify env var is set: `REACT_APP_API_URL=https://<your-backend-url>`
+2. Backend is deployed and reachable at `<your-backend-url>/api/users/login`
+3. Seed data exists on backend DB (`cd server && npm run data:import`)
+4. After changing Netlify env vars, redeploy the site
+
 ### Alternative Commands
 
 - `npm run server` - Start only the backend server

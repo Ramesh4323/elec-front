@@ -46,13 +46,13 @@ const Footer = () => {
             </div>
 
             <div className="flex space-x-4">
-              <a href="#" className="w-10 h-10 bg-secondary-700 hover:bg-primary-600 rounded-xl flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-lg group" title="Facebook">
+              <a href="https://facebook.com" target="_blank" rel="noreferrer" className="w-10 h-10 bg-secondary-700 hover:bg-primary-600 rounded-xl flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-lg group" title="Facebook">
                 <FaFacebook className="text-secondary-300 group-hover:text-white" />
               </a>
-              <a href="#" className="w-10 h-10 bg-secondary-700 hover:bg-primary-600 rounded-xl flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-lg group" title="Twitter">
+              <a href="https://twitter.com" target="_blank" rel="noreferrer" className="w-10 h-10 bg-secondary-700 hover:bg-primary-600 rounded-xl flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-lg group" title="Twitter">
                 <FaTwitter className="text-secondary-300 group-hover:text-white" />
               </a>
-              <a href="#" className="w-10 h-10 bg-secondary-700 hover:bg-accent-600 rounded-xl flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-lg group" title="Instagram">
+              <a href="https://instagram.com" target="_blank" rel="noreferrer" className="w-10 h-10 bg-secondary-700 hover:bg-accent-600 rounded-xl flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-lg group" title="Instagram">
                 <FaInstagram className="text-secondary-300 group-hover:text-white" />
               </a>
             </div>
@@ -92,28 +92,28 @@ const Footer = () => {
             <h4 className="text-lg font-display font-semibold mb-6 text-white">Categories</h4>
             <ul className="space-y-3">
               <li>
-                <a href="#" className="text-secondary-300 hover:text-accent-400 transition-all duration-300 flex items-center group">
+                <Link to="/shop" className="text-secondary-300 hover:text-accent-400 transition-all duration-300 flex items-center group">
                   <span className="w-1.5 h-1.5 bg-accent-400 rounded-full mr-3 opacity-0 group-hover:opacity-100 transition-opacity"></span>
                   Pipes
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-secondary-300 hover:text-accent-400 transition-all duration-300 flex items-center group">
+                <Link to="/shop" className="text-secondary-300 hover:text-accent-400 transition-all duration-300 flex items-center group">
                   <span className="w-1.5 h-1.5 bg-accent-400 rounded-full mr-3 opacity-0 group-hover:opacity-100 transition-opacity"></span>
                   Wires
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-secondary-300 hover:text-accent-400 transition-all duration-300 flex items-center group">
+                <Link to="/shop" className="text-secondary-300 hover:text-accent-400 transition-all duration-300 flex items-center group">
                   <span className="w-1.5 h-1.5 bg-accent-400 rounded-full mr-3 opacity-0 group-hover:opacity-100 transition-opacity"></span>
                   Switches
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-secondary-300 hover:text-accent-400 transition-all duration-300 flex items-center group">
+                <Link to="/shop" className="text-secondary-300 hover:text-accent-400 transition-all duration-300 flex items-center group">
                   <span className="w-1.5 h-1.5 bg-accent-400 rounded-full mr-3 opacity-0 group-hover:opacity-100 transition-opacity"></span>
                   Lights
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
