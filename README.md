@@ -131,6 +131,40 @@ Steps:
 
 Use `client/.env.example` as reference.
 
+## Netlify Deployment (Frontend)
+
+This repository is Netlify-ready using root `netlify.toml`.
+
+Steps:
+
+1. In Netlify, click **Add new site** -> **Import an existing project**.
+2. Connect this GitHub repository.
+3. Netlify will auto-detect settings from `netlify.toml`:
+    - Base directory: `client`
+    - Build command: `npm install && npm run build`
+    - Publish directory: `build`
+4. In Netlify Site Settings -> Environment Variables, add:
+    - `REACT_APP_API_URL=https://<your-backend-url>`
+5. Deploy the site.
+
+Notes:
+
+- Netlify hosts the frontend only.
+- Deploy backend separately (Render is already configured in `render.yaml`).
+- SPA routing is handled by Netlify redirect rule in `netlify.toml`.
+
+## Sample Login Credentials
+
+After running the data seed (`cd server && npm run data:import`), you can log in with:
+
+- Admin user
+   - Username (email): `admin@jitendradhawal.com`
+   - Password: `password`
+
+- Normal user
+   - Username (email): `john@example.com`
+   - Password: `password`
+
 ### Alternative Commands
 
 - `npm run server` - Start only the backend server
