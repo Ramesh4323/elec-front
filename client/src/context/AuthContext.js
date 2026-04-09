@@ -1,15 +1,13 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
 import axios from 'axios';
 
-const envApiUrl = process.env.REACT_APP_API_URL?.trim();
-const isLocalHost =
-  window.location.hostname === 'localhost' ||
-  window.location.hostname === '127.0.0.1';
-const baseURL = envApiUrl || (isLocalHost ? 'http://localhost:5000' : '');
+// ✅ FORCE backend URL if ENV not set
+const baseURL =
+  process.env.REACT_APP_API_URL?.trim() ||
+  "https://elec-back.onrender.com";
 
-if (baseURL) {
-  axios.defaults.baseURL = baseURL;
-}
+// ✅ Set axios base URL
+axios.defaults.baseURL = baseURL;
 
 const AuthContext = createContext();
 
