@@ -17,24 +17,36 @@ const allowedOrigins = [
   'http://localhost:3000',
 ].filter(Boolean);
 
+const corsOptions = {
+  origin(origin, callback) {
+    // Allow server-to-server or curl/postman requests with no origin header.
+    if (!origin) {
+      return callback(null, true);
+    }
+
+    if (allowedOrigins.includes(origin)) {
+      return callback(null, true);
+    }
+
+    return callback(new Error(`CORS blocked for origin: ${origin}`));
+  },
+  methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+  credentials: true,
+  optionsSuccessStatus: 204,
+};
+
 // Middleware
-app.use(
-  cors({
-    origin(origin, callback) {
-      // Allow server-to-server or curl/postman requests with no origin header.
-      if (!origin) {
-        return callback(null, true);
-      }
+app.use(cors(corsOptions));
+app.options(/.*/, cors(corsOptions));
 
-      if (allowedOrigins.includes(origin)) {
-        return callback(null, true);
-      }
+app.use((req, res, next) => {
+  if (req.method === 'OPTIONS') {
+    console.log(`CORS preflight: ${req.method} ${req.originalUrl} from ${req.headers.origin || 'no-origin'}`);
+  }
+  next();
+});
 
-      return callback(new Error(`CORS blocked for origin: ${origin}`));
-    },
-    credentials: true,
-  })
-);
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
@@ -65,10 +77,12 @@ app.use((req, res) => {
 });
 
 app.use((err, req, res, next) => {
+  const isCorsError = err.message && err.message.startsWith('CORS blocked for origin:');
   console.error('Unhandled request error:', err.message);
-  res.status(500).json({
+
+  res.status(isCorsError ? 403 : 500).json({
     success: false,
-    message: 'Internal server error',
+    message: isCorsError ? err.message : 'Internal server error',
   });
 });
 
