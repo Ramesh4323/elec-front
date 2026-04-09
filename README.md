@@ -99,6 +99,38 @@ npm run dev
 
 This will start both the backend server (http://localhost:5000) and frontend (http://localhost:3000) simultaneously.
 
+## Production Deployment (Full Stack)
+
+This repository includes both frontend and backend and can be deployed as two services.
+
+### Option A: Render Blueprint (recommended)
+
+This repo includes `render.yaml` at the root to provision:
+
+- `elec-api` (Node backend from `server/`)
+- `elec-client` (Static React frontend from `client/`)
+
+Steps:
+
+1. Push this repository to GitHub.
+2. In Render, choose **New +** -> **Blueprint** and connect this repository.
+3. Render reads `render.yaml` and creates both services.
+4. Set required env vars in Render:
+   - Backend (`elec-api`): `MONGO_URI`, `JWT_SECRET`
+   - Frontend (`elec-client`): `REACT_APP_API_URL` (example: `https://elec-api.onrender.com`)
+5. Trigger deploy for both services after env vars are set.
+
+### Option B: Manual split deploy (Netlify + Render)
+
+1. Deploy backend (`server/`) on a Render Web Service.
+2. Deploy frontend (`client/`) on Netlify.
+3. In Netlify env vars set `REACT_APP_API_URL=https://<your-render-backend-url>`.
+4. Redeploy frontend.
+
+### Frontend env reference
+
+Use `client/.env.example` as reference.
+
 ### Alternative Commands
 
 - `npm run server` - Start only the backend server
